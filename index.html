@@ -25,6 +25,13 @@
     var marker = new maplibregl.Marker()
         .setLngLat([112.56513, -6.98846])
         .addTo(map);
+
+    // add new marker on click  
+    map.on('click', function(e) {
+        var marker = new maplibregl.Marker()
+            .setLngLat(e.lngLat)
+            .addTo(map);
+            
 </script>
 
 </body>
